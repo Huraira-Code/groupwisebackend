@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "295889097570",
+    "project_id": "kirayedar-34d44",
+    "storage_bucket": "kirayedar-34d44.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295889097570:android:e8fbd6d52f01aa0118123b",
+        "android_client_info": {
+          "package_name": "com.kirayedar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBXRsFDRr__rxLP70KxnStIKXvZdHagjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
