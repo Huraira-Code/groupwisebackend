@@ -66,45 +66,45 @@ const registerUser = async (req, res) => {
     let transcriptImageUrl = null;
     let studentIdImageUrl = null;
 
-    try {
-      // Upload transcript image to Cloudinary
-      // Use transcriptFile.path if Multer is configured for disk storage
-      // Use transcriptFile.buffer if Multer is configured for memory storage
-      const transcriptUploadResult = await cloudinary.uploader.upload(
-        transcriptFile.path,
-        {
-          folder: "registration_transcripts", // Optional: specify a folder in Cloudinary
-          resource_type: "image", // Ensure it's treated as an image
-        }
-      );
-      transcriptImageUrl = transcriptUploadResult.secure_url;
+    // try {
+    //   // Upload transcript image to Cloudinary
+    //   // Use transcriptFile.path if Multer is configured for disk storage
+    //   // Use transcriptFile.buffer if Multer is configured for memory storage
+    //   const transcriptUploadResult = await cloudinary.uploader.upload(
+    //     transcriptFile.path,
+    //     {
+    //       folder: "registration_transcripts", // Optional: specify a folder in Cloudinary
+    //       resource_type: "image", // Ensure it's treated as an image
+    //     }
+    //   );
+    //   transcriptImageUrl = transcriptUploadResult.secure_url;
 
-      // Upload student ID image to Cloudinary
-      const studentIdUploadResult = await cloudinary.uploader.upload(
-        studentIdFile.path,
-        {
-          folder: "registration_student_ids", // Optional: specify a folder in Cloudinary
-          resource_type: "image",
-        }
-      );
-      studentIdImageUrl = studentIdUploadResult.secure_url;
+    //   // Upload student ID image to Cloudinary
+    //   const studentIdUploadResult = await cloudinary.uploader.upload(
+    //     studentIdFile.path,
+    //     {
+    //       folder: "registration_student_ids", // Optional: specify a folder in Cloudinary
+    //       resource_type: "image",
+    //     }
+    //   );
+    //   studentIdImageUrl = studentIdUploadResult.secure_url;
 
-      // Upload student ID image to Cloudinary
-      const studentProfileUploadResult = await cloudinary.uploader.upload(
-        ProfilePic.path,
-        {
-          folder: "profile_images", // Optional: specify a folder in Cloudinary
-          resource_type: "image",
-        }
-      );
-      studentProfileImageUrl = studentProfileUploadResult.secure_url;
-    } catch (uploadError) {
-      console.error("Cloudinary Upload Error:", uploadError);
-      return res.status(500).json({
-        message: "Failed to upload images to Cloudinary.",
-        error: uploadError.message,
-      });
-    }
+    //   // Upload student ID image to Cloudinary
+    //   const studentProfileUploadResult = await cloudinary.uploader.upload(
+    //     ProfilePic.path,
+    //     {
+    //       folder: "profile_images", // Optional: specify a folder in Cloudinary
+    //       resource_type: "image",
+    //     }
+    //   );
+    //   studentProfileImageUrl = studentProfileUploadResult.secure_url;
+    // } catch (uploadError) {
+    //   console.error("Cloudinary Upload Error:", uploadError);
+    //   return res.status(500).json({
+    //     message: "Failed to upload images to Cloudinary.",
+    //     error: uploadError.message,
+    //   });
+    // }
 
     const newUser = new User({
       email,
