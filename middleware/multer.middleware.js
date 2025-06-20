@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 // Use Vercel-compatible temporary upload directory
-const uploadDir = "/tmp"; // <-- Important: only writable directory in Vercel
+const uploadDir = "tmp"; // <-- Important: only writable directory in Vercel
 
 // Ensure the uploads directory exists
 if (!fs.existsSync(uploadDir)) {
