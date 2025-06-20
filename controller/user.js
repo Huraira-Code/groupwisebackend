@@ -116,9 +116,7 @@ const registerUser = async (req, res) => {
       graduationMonth,
       graduationYear,
       password,
-      profileImage: studentProfileImageUrl,
-      transcriptImage: transcriptImageUrl, // Save Cloudinary URL
-      studentIdImage: studentIdImageUrl, // Save Cloudinary URL
+      
       selectedInterests: selectedInterests ? JSON.parse(selectedInterests) : [],
     });
 
