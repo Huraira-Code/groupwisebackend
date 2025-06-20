@@ -43,25 +43,25 @@ const registerUser = async (req, res) => {
       ? req.files["profileImage"][0]
       : null;
     // Basic validation for text fields
-    if (
-      !firstName ||
-      !lastName ||
-      !schoolName ||
-      !courseMajor ||
-      !graduationMonth ||
-      !graduationYear
-    ) {
-      return res
-        .status(400)
-        .json({ message: "All required text fields are missing." });
-    }
+    // if (
+    //   !firstName ||
+    //   !lastName ||
+    //   !schoolName ||
+    //   !courseMajor ||
+    //   !graduationMonth ||
+    //   !graduationYear
+    // ) {
+    //   return res
+    //     .status(400)
+    //     .json({ message: "All required text fields are missing." });
+    // }
 
-    // Validate if files were provided
-    if (!transcriptFile || !studentIdFile) {
-      return res.status(400).json({
-        message: "Both transcript and student ID images are required.",
-      });
-    }
+    // // Validate if files were provided
+    // if (!transcriptFile || !studentIdFile) {
+    //   return res.status(400).json({
+    //     message: "Both transcript and student ID images are required.",
+    //   });
+    // }
 
     let transcriptImageUrl = null;
     let studentIdImageUrl = null;
